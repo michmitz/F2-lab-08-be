@@ -17,11 +17,11 @@ async function run() {
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
                 );           
-                CREATE TABLE animals (
-                    id SERIAL PRIMARY KEY NOT NULL,
-                    name VARCHAR(512) NOT NULL,
-                    cool_factor INTEGER NOT NULL,
-                    owner_id INTEGER NOT NULL REFERENCES users(id)
+                CREATE TABLE gemstones (
+                    name VARCHAR(50) NOT NULL,
+                    color VARCHAR(50) NOT NULL,
+                    weight INTEGER NOT NULL,
+                    isPrecious BOOLEAN NOT NULL
             );
         `);
 
