@@ -20,31 +20,37 @@ describe('app routes', () => {
     return client.end(done);
   });
 
-  test('returns animals', async() => {
+  test('returns gemstones', async() => {
 
     const expectation = [
       {
-        'id': 1,
-        'name': 'bessie',
-        'coolfactor': 3,
-        'owner_id': 1
+        name: 'quartz',
+        color: 'white',
+        weight: 3,
+        isPrecious: false
       },
       {
-        'id': 2,
-        'name': 'jumpy',
-        'coolfactor': 4,
-        'owner_id': 1
+        name: 'diamond',
+        color: 'clear',
+        weight: 5,
+        isPrecious: true
       },
       {
-        'id': 3,
-        'name': 'spot',
-        'coolfactor': 10,
-        'owner_id': 1
+        name: 'ruby',
+        color: 'red',
+        weight: 2,
+        isPrecious: true
+      },
+      {
+        name: 'sapphire',
+        color: 'blue',
+        weight: 1,
+        isPrecious: true
       }
     ];
 
     const data = await fakeRequest(app)
-      .get('/animals')
+      .get('/gemstones')
       .expect('Content-Type', /json/)
       .expect(200);
 
