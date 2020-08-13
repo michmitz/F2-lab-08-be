@@ -18,10 +18,12 @@ async function run() {
                     hash VARCHAR(512) NOT NULL
                 );           
                 CREATE TABLE gemstones (
+                    id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(50) NOT NULL,
                     color VARCHAR(50) NOT NULL,
                     weight INTEGER NOT NULL,
-                    is_precious BOOLEAN NOT NULL
+                    is_precious BOOLEAN NOT NULL,
+                    owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
 
