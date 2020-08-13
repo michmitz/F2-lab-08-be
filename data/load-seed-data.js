@@ -27,10 +27,10 @@ async function run() {
     await Promise.all(
       gemstones.map(gemstone => {
         return client.query(`
-                    INSERT INTO gemstones (name, color, weight, isPrecious)
+                    INSERT INTO gemstones (name, color, weight, is_precious)
                     VALUES ($1, $2, $3, $4);
                 `,
-        [gemstone.name, gemstone.color, gemstone.weight, gemstone.isPrecious]);
+        [gemstone.name, gemstone.color, gemstone.weight, gemstone.is_precious]);
       })
     );
     

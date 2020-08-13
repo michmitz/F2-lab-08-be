@@ -21,7 +21,7 @@ async function run() {
                     name VARCHAR(50) NOT NULL,
                     color VARCHAR(50) NOT NULL,
                     weight INTEGER NOT NULL,
-                    isPrecious BOOLEAN NOT NULL
+                    is_precious BOOLEAN NOT NULL
             );
         `);
 
