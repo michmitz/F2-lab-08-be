@@ -29,7 +29,7 @@ describe('app routes', () => {
         color: 'white',
         weight: 3,
         is_precious: false,
-        owner_id: 1
+        cut_style: 'Heart'
       },
       {
         id: 2,
@@ -37,7 +37,7 @@ describe('app routes', () => {
         color: 'clear',
         weight: 5,
         is_precious: true,
-        owner_id: 1
+        cut_style: 'Oval'
       },
       {
         id: 3,
@@ -45,7 +45,7 @@ describe('app routes', () => {
         color: 'red',
         weight: 2,
         is_precious: true,
-        owner_id: 1
+        cut_style: 'Square'
       },
       {
         id: 4,
@@ -53,7 +53,7 @@ describe('app routes', () => {
         color: 'blue',
         weight: 1,
         is_precious: true,
-        owner_id: 1
+        cut_style: 'Round'
       }
     ];
 
