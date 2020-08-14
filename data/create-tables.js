@@ -16,14 +16,19 @@ async function run() {
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
-                );           
+                );
+                CREATE TABLE cuts (
+                  id SERIAL PRIMARY KEY NOT NULL,
+                  cut_style VARCHAR(50) NOT NULL
+                );
                 CREATE TABLE gemstones (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(50) NOT NULL,
                     color VARCHAR(50) NOT NULL,
                     weight INTEGER NOT NULL,
                     is_precious BOOLEAN NOT NULL,
-                    owner_id INTEGER NOT NULL REFERENCES users(id)
+                    owner_id INTEGER NOT NULL REFERENCES users(id),
+                    cut_id INTEGER NOT NULL REFERENCES cuts(id)
             );
         `);
 
